@@ -8,7 +8,7 @@ class AIInvestmentAdvisor {
         };
         this.marketData = {};
         this.chatHistory = [];
-        this.apiKey = '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';
+        this.apiKey = 'API_KEY';
         this.apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
     }
 
