@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🚀 Profile - Finance App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      height: 100%;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 via-purple-100 to-purple-200 font-sans flex h-full transition-all duration-500">
+
+  <!-- Sidebar -->
+  <aside class="fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-purple-900 to-gray-900 text-white flex flex-col justify-between p-6 border-r border-purple-700/40 shadow-2xl">
+    <!-- Logo -->
+    <div>
+      <div class="flex items-center gap-3 mb-12">
+        <img src="assets/hero-finance.jpg" alt="Finance Logo" class="w-12 h-12 rounded-xl shadow-md">
+        <h2 class="text-2xl font-extrabold tracking-wide">Finance App</h2>
+      </div>
+
+      <!-- Nav Links -->
+      <nav class="space-y-3">
+        <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-purple-600/70 hover:translate-x-2 transition-all duration-300">🏠 <span>Dashboard</span></a>
+        <a href="profile.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-purple-700/40 hover:bg-purple-600/70 hover:translate-x-2 transition-all duration-300">👤 <span>Profile</span></a>
+        <a href="monthly.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-purple-600/70 hover:translate-x-2 transition-all duration-300">📊 <span>Monthly Stats</span></a>
+        <a href="investments.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-purple-600/70 hover:translate-x-2 transition-all duration-300">💼 <span>Investments</span></a>
+    </div>
+
+    <!-- Logout Button -->
+    <button class="px-4 py-3 mt-6 bg-gradient-to-r from-red-500 to-red-600 rounded-xl hover:scale-105 transition-all duration-300 font-bold shadow-lg">Logout</button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="ml-64 flex-1 p-10 space-y-10 min-h-full">
+
+    <!-- Profile Card -->
+    <div class="bg-gradient-to-br from-purple-50 to-white/70 backdrop-blur-md rounded-3xl shadow-2xl p-8 flex flex-col md:flex-row items-center gap-8 card">
+
+      <!-- Profile Picture -->
+      <div class="relative">
+        <img src="assets/profile-placeholder.png" id="profileImage" alt="User Photo" class="w-32 h-32 rounded-full object-cover border-4 border-purple-500 shadow-lg">
+        <label for="profilePicInput" class="absolute bottom-0 right-0 bg-purple-500 p-2 rounded-full cursor-pointer hover:bg-purple-600 hover:scale-110 transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536M9 11l6 6M9 11H3v6h6z" />
+          </svg>
+        </label>
+        <input type="file" id="profilePicInput" class="hidden" accept="image/*">
+      </div>
+
+      <!-- User Info -->
+      <div class="flex-1">
+        <h2 class="text-2xl font-bold text-gray-800">John Doe</h2>
+        <p class="text-gray-600">john.doe@example.com</p>
+        <p class="mt-2 text-gray-500">Premium Member</p>
+      </div>
+
+      <!-- Preferences on Right Side -->
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <span>Notifications</span>
+          <input type="checkbox" class="toggle toggle-primary" checked>
+        </div>
+        <div class="flex items-center justify-between">
+          <span>Currency</span>
+          <select class="border rounded px-2 py-1">
+            <option>USD</option>
+            <option>EUR</option>
+            <option>INR</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Financial Overview Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-gradient-to-br from-purple-50 to-white/70 backdrop-blur-md rounded-3xl shadow-2xl p-6 card hover:shadow-3xl hover:-translate-y-1 transition-all duration-300">
+        <p class="text-xl text-gray-500">💰 Total Balance</p>
+        <p class="text-3xl font-bold text-purple-800 mt-2">$12,345</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-50 to-white/70 backdrop-blur-md rounded-3xl shadow-2xl p-6 card hover:shadow-3xl hover:-translate-y-1 transition-all duration-300">
+        <p class="text-xl text-gray-500">📈 Monthly Income</p>
+        <p class="text-3xl font-bold text-green-700 mt-2">$4,200</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-50 to-white/70 backdrop-blur-md rounded-3xl shadow-2xl p-6 card hover:shadow-3xl hover:-translate-y-1 transition-all duration-300">
+        <p class="text-xl text-gray-500">📉 Monthly Expenses</p>
+        <p class="text-3xl font-bold text-red-700 mt-2">$1,800</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-50 to-white/70 backdrop-blur-md rounded-3xl shadow-2xl p-6 card hover:shadow-3xl hover:-translate-y-1 transition-all duration-300">
+        <p class="text-xl text-gray-500">📊 Investment Growth</p>
+        <p class="text-3xl font-bold text-blue-700 mt-2">$3,500</p>
+      </div>
+    </div>
+
+    <!-- Recent Activity Section -->
+    <div>
+      <h3 class="font-semibold text-xl mb-4 text-gray-800">Recent Activity</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white/70 backdrop-blur-md rounded-3xl shadow-lg p-4 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 card">
+          <p class="text-gray-800 font-semibold">💸 Paid $120 for Netflix</p>
+          <p class="text-gray-500 text-sm">Sep 25, 2025</p>
+        </div>
+        <div class="bg-white/70 backdrop-blur-md rounded-3xl shadow-lg p-4 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 card">
+          <p class="text-gray-800 font-semibold">📈 Added $500 to Crypto Investment</p>
+          <p class="text-gray-500 text-sm">Sep 24, 2025</p>
+        </div>
+        <div class="bg-white/70 backdrop-blur-md rounded-3xl shadow-lg p-4 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 card">
+          <p class="text-gray-800 font-semibold">🏦 Transferred $100 to Savings Account</p>
+          <p class="text-gray-500 text-sm">Sep 23, 2025</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="profile.js"></script>
+</body>
+</html>
